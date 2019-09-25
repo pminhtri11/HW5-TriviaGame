@@ -1,0 +1,55 @@
+html{
+    font-family: 'Merienda One', cursive;  
+}
+body{
+    background-image: url("../images/Wallpaper.jpg");
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.containerOverall  {
+    background-color: cadetblue;
+    opacity: 0.8;
+    text-align: center;
+    margin:auto;
+    width: 60%;
+    margin-top: 10%;    
+    font-size: 20px;
+    padding: 10px;
+}
+header{
+    font-size: 30px;
+    color: ghostwhite;
+    font-weight: bolder;
+}
+#answerChoice2:hover,#answerChoice3:hover,#answerChoice1:hover,#answerChoice4:hover
+{
+    font-size: 20px;
+    /* border: 1px solid rgba(233, 99, 9, 0.336); */
+    color: white;
+}
+
+#timer{
+    color: cornsilk;
+}
+#questionAsk{
+    margin-top: 0;
+    font-size: 25px;
+    color: chartreuse;
+}
+
+#guess{
+    font-weight: bold;
+    color: brown;
+}
+
+h2{
+    font-size: 30px;
+    color: chartreuse;
+}
+
+#unAnswer, #correct,#wrong
+{
+    color: white;
+}
+
