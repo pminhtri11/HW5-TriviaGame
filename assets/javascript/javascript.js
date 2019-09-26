@@ -58,8 +58,9 @@ function buffer() {
 
 //creating timecountdown.
 function timerInterval() {
-  var sec = 5;
+  var sec = 10;
   document.getElementById("timer").innerHTML = "Time Remain: " + sec + " second";
+
   timerFinal = setInterval(function() {
     sec--;
     document.getElementById("timer").innerHTML = "Time Remain: " + sec + " second";  
@@ -98,6 +99,7 @@ function QA() {
   // if running out of questions, call the result function to end the program.
   if (b >= questionObjects.length) {
     result();
+    return;
   }
   
   // hide the result 
@@ -119,13 +121,15 @@ function QA() {
   }
   
   $("#answerChoice1, #answerChoice2, #answerChoice3, #answerChoice4").bind("click", function () {
+
     //unbind it after click
     $("#answerChoice1, #answerChoice2, #answerChoice3, #answerChoice4").unbind("click");
     if (this.value === answerArray[b]) {
       $("#guess").show();
       document.getElementById("guess").innerHTML = "You are correct!";
       correctJ++;
-    } else {
+    }
+    else {
       $("#guess").show();
       document.getElementById("guess").innerHTML = "You are wrong! The correct answer is: " + answerArray[b];
       wrongJ++;
@@ -153,16 +157,16 @@ function QA() {
 }
 
 function result() {  
-  // $("#timer").hide();
+  $("#timer").hide();
   $(".onClickButton").hide();
   $(".scoreContainer").show();
   document.getElementById("correct").innerHTML = "Right answers: " + correctJ;
   document.getElementById("wrong").innerHTML = "Wrong answers: " + wrongJ;
   document.getElementById("unAnswer").innerHTML = "Unanswered Question: " + notAnswer;
-
+  console.log(timerFinal);
 }
 
 
 
 // Error With the Program:
-// 2. The timer at the result screen wont stop.
+// 2. The timer at the result screen wont stop. 
